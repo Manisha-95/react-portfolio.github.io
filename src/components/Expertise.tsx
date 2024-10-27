@@ -1,7 +1,8 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faDocker, faPython } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faDocker } from '@fortawesome/free-brands-svg-icons';
+import {faRobot} from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
@@ -12,10 +13,8 @@ const labelsFirst = [
     "HTML5",
     "CSS3",
     "SASS",
-    "Flask",
-    "Python",
-    "SQL",
-    "PostgreSQL",
+    "CSS3",
+    "Redux",
     "Postman"
 ];
 
@@ -23,22 +22,11 @@ const labelsSecond = [
     "Git",
     "GitHub Actions",
     "Docker",
-    "AWS",
-    "Azure",
-    "Linux",
-    "Snowflake",
-    "Pandas",
-    "Selenium",
+    "AWS"
 ];
 
 const labelsThird = [
-    "OpenAI",
-    "Groq",
-    "LangChain",
-    "Qdrant",
-    "Hugging Face",
-    "LlamaIndex",
-    "Streamlit",
+    "OpenAI"
 ];
 
 function Expertise() {
@@ -72,9 +60,9 @@ function Expertise() {
                 </div>
 
                 <div className="skill">
-                    <FontAwesomeIcon icon={faPython} size="3x"/>
+                    <FontAwesomeIcon icon={faRobot} size="3x"/>
                     <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
+                    <p>I stay relevant in the market by leveraging the latest AI models in my projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Tech stack:</span>
                         {labelsThird.map((label, index) => (
