@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import TextField from '@mui/material/TextField';
-import param from './EmailjsParams';
+import {param} from './EmailjsParams';
 
 
 
@@ -38,7 +38,7 @@ function Contact() {
       };
 
       console.log(templateParams);
-      emailjs.send('service_0v9omlf', 'template_3g7wmot', templateParams, 'rbLlVJwj641iLxpTu').then(
+      emailjs.send(param.serviceID, param.templateID, templateParams, param.apiKey).then(
         (response: { status: any; text: any; }) => {
           console.log('SUCCESS!', response.status, response.text);
         },
@@ -61,7 +61,6 @@ function Contact() {
           <Box
             ref={form}
             component="form"
-            noValidate
             autoComplete="off"
             className='contact-form'
           >
